@@ -131,7 +131,7 @@ def find_countries(cn):
     
 
     q = """
-        SELECT name, code, gdp, inflation FROM Country
+        SELECT country_name, country_code, gdp, inflation FROM Country
         WHERE (gdp BETWEEN %s AND %s)
             AND (inflation BETWEEN %s AND %s)
         ORDER BY gdp DESC, inflation;
